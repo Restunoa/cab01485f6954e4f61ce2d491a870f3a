@@ -5,8 +5,10 @@ local LocalPlayer = Players.LocalPlayer
 
 for _, v in pairs(LocalPlayer.Character:GetChildren()) do
     if v:IsA("Folder") and v.Name == NameToLookFor then
+        print(v.Name)
         for _, v2 in pairs(v:GetDescendants()) do
             if not v2:IsA("Folder") then
+                print(v2.Name + " X")
                 v2:Destroy()
             end
         end
