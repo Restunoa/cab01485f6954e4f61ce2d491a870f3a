@@ -8,7 +8,7 @@ for _, v in pairs(LocalPlayer.Character:GetChildren()) do
         print(v.Name)
         for _, v2 in pairs(v:GetDescendants()) do
             if not v2:IsA("Folder") then
-                print(v2.Name + " X")
+                print(v2.Name .. " X")
                 v2:Destroy()
             end
         end
